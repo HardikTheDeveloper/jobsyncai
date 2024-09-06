@@ -331,7 +331,7 @@ if job_indexes:
                         except Exception as e:
                                 st.error(f"An error occurred: {e}")
                         if flag is not None:
-                                GOOGLE_API_KEY=os.getenv('GeminiAPI')
+                                GOOGLE_API_KEY=st.secrets.GeminiAPI.key
                                 genai.configure(api_key=GOOGLE_API_KEY)
 
                                 model=genai.GenerativeModel('gemini-pro')
