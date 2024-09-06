@@ -86,20 +86,19 @@ if job_indexes:
 #For now we are taking 'moreInfoIndex'
 # ------------------------------------------5.Retrieving Selected Job Information from simplify to display----------------------------------------------------------
 
-## -----------------------------------------------2.Requesting and Getting response from simplify----------------------------------------------------------------
-        
-        # # expander = c.expander("MORE INFO")
-        
-        # # moreInfoIndex=job_index
-            
-        # JobLinkListList=JobLinkList[moreInfoIndex].contents
+# -----------------------------------------------2.Requesting and Getting response from simplify----------------------------------------------------------------
 
-        # if(len(JobLinkListList)==1):
-        #     moreInfoLink=JobLinkListList[0]['href']
-        # else:
-        #     moreInfoLink=JobLinkListList[2]['href']
-        # Response=request.get(moreInfoLink)
-        # moreInfo=BeautifulSoup(Response.text,"html.parser")
+        expander = c.expander("MORE INFO")
+        moreInfoIndex=job_index
+            
+        JobLinkListList=JobLinkList[moreInfoIndex].contents
+
+        if(len(JobLinkListList)==1):
+            moreInfoLink=JobLinkListList[0]['href']
+        else:
+            moreInfoLink=JobLinkListList[2]['href']
+        Response=request.get(moreInfoLink)
+        moreInfo=BeautifulSoup(Response.text,"html.parser")
 
         ##---------------------------------------------Extracting Data from Simplify of moreInfoLink---------------------------------------------------------------
         #------------------------------------------Extracting Company Details-----------------------------------------------------
