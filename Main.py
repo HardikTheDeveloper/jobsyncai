@@ -102,7 +102,7 @@ if job_indexes:
 
         ##---------------------------------------------Extracting Data from Simplify of moreInfoLink---------------------------------------------------------------
         #------------------------------------------Extracting Company Details-----------------------------------------------------
-        companyName=moreInfo.find('p',class_="text-left text-lg font-bold text-blueGray")
+        companyName=moreInfo.find('p',class_="text-left text-lg font-bold text-secondary-400")
         if(type(companyName)!=type(None)):
             companyName=companyName.text
         else:
