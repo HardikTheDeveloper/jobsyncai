@@ -88,9 +88,9 @@ if job_indexes:
 
 ## -----------------------------------------------2.Requesting and Getting response from simplify----------------------------------------------------------------
         
-        expander = c.expander("MORE INFO")
+        # expander = c.expander("MORE INFO")
         
-        moreInfoIndex=job_index
+        # moreInfoIndex=job_index
             
         JobLinkListList=JobLinkList[moreInfoIndex].contents
 
