@@ -192,7 +192,7 @@ if job_indexes:
             JobWorkType=JobWorkType.text
 
 
-        JobStatus=moreInfo.find('div',class_="rounded bg-red-100 px-2 text-sm font-semibold text-red-600")#E.g. - INACTIVE
+        JobStatus=moreInfo.find('div',class_="rounded-full bg-primary-50 px-4 py-2 text-sm text-primary-400")#E.g. - INACTIVE
         if(type(JobStatus)!=type(None)):
             JobStatus=JobStatus.text
 
