@@ -183,7 +183,7 @@ if job_indexes:
             CompanyBenifits=""
 
         #------------------------------------------Extracting Job Details-------------------------------------------
-        JobExperienceLevel=moreInfo.find('p',class_="text-sm font-semibold")
+        JobExperienceLevel=moreInfo.find('p',class_="text-sm font-bold text-secondary-400")
         if(JobExperienceLevel is not None):
             JobExperienceLevel=JobExperienceLevel.text
 
@@ -196,9 +196,9 @@ if job_indexes:
         if(type(JobStatus)!=type(None)):
             JobStatus=JobStatus.text
 
-        JobRequiredSkillsTagList=moreInfo.find('div',class_="mb-3 ml-6 flex flex-wrap justify-start gap-3 text-xs")
+        JobRequiredSkillsTagList=moreInfo.find('div',class_="mb-3 ml-6 flex flex-wrap justify-start gap-3 text-sm")
         if(type(JobRequiredSkillsTagList)!=type(None)):
-            JobRequiredSkillsTagList=moreInfo.find('div',class_="mb-3 ml-6 flex flex-wrap justify-start gap-3 text-xs").contents
+            JobRequiredSkillsTagList=moreInfo.find('div',class_="mb-3 ml-6 flex flex-wrap justify-start gap-3 text-sm").contents
             JobRequiredSkillsList=[]#List of Job Required Skills
             for JobRequiredSkillsTag in JobRequiredSkillsTagList:
                 JobRequiredSkillsList.append(JobRequiredSkillsTag.text)
@@ -335,7 +335,7 @@ if job_indexes:
 
                                 model=genai.GenerativeModel('gemini-pro')
 
-                                response=model.generate_content(f'Generate a Professional E-mail body for tech job of {companyName},{jobType} acccording {ResumeInfo}, the resume should be accurate with no blanks to fill in 500 charcters only')
+                                response=model.generate_content(f'Generate a Professional E-mail body for tech job of {companyName},{jobType} acccording {ResumeInfo}, the resume should be accurate with no blanks to fill in 500 charcters only, don't ask for hiring manager name, don't create any placeholder for any information not provided')
 
                                 encoded_response = urllib.parse.quote(response.text)
 
