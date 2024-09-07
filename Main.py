@@ -335,7 +335,10 @@ if job_indexes:
 
                                 model=genai.GenerativeModel('gemini-pro')
 
-                                response=model.generate_content(f'Generate a Professional E-mail body for tech job of {companyName},{jobType} acccording {ResumeInfo}, the resume should be accurate with no blanks to fill in 500 charcters only, don't ask for hiring manager name, don't create any placeholder for any information not provided')
+                                response=model.generate_content(ff'Generate a Professional E-mail body for a tech job at {companyName}, '
+    f'{jobType} according to {ResumeInfo}. The resume should be accurate with the'
+    'no blanks to fill in 500 characters only. Don\'t ask for the hiring manager\'s name, '
+    'and don\'t create any placeholder for any information not provided.'')
 
                                 encoded_response = urllib.parse.quote(response.text)
 
