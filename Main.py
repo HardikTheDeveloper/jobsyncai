@@ -207,7 +207,7 @@ if job_indexes:
             for JobRequiredSkill in JobRequiredSkillsList:
                 JobRequiredSkills=JobRequiredSkill+","
         else:
-            JobRequiredSkills=""
+            JobRequiredSkills="NO DATA"
 
 
         JobRequirementsTag=moreInfo.find('div',string=re.compile("Requirements")).nextSibling
