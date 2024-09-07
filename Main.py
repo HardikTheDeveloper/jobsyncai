@@ -269,9 +269,9 @@ if job_indexes:
         expander.write(f'**{JobExperienceLevel}** Level')
         expander.write(f'**{JobLocation}**')
         expander.divider()
-        expander.write("**Required Skills**")
-        expander.write(JobRequiredSkills)
-        expander.divider()
+        # expander.write("**Required Skills**")
+        # expander.write(JobRequiredSkills)
+        # expander.divider()
         if(type(JobRequirementsList)!=type(None)):
             expander.write("**Requirements**")
             for JobRequirement in JobRequirementsList:
