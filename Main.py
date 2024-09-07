@@ -281,7 +281,6 @@ if job_indexes:
             expander.write("**Responsibilities**")
             for JobResponsibility in JobResponsibilitiesList:
                 expander.write(f'-{JobResponsibility}')
-        expander.divider()
 
         #-------------------------------------------------------------------Extracting from Crunchbase link-----------------------------------------------------------------------------
 
